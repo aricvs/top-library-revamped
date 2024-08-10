@@ -18,9 +18,13 @@ function displayBooks() {
   }
 }
 
+function clickAddBookBtn() {
+  addBookBtn = document.querySelector(".add-book-btn");
+  addBookBtn.addEventListener("click", () => console.log("clicked"));
+}
+
 addBookToLibrary("worm", "bow", 5000, true);
 addBookToLibrary("ubik", "dick", 500, true);
 addBookToLibrary("cronicas", "hefacar", 400, false);
-
-console.log(myLibrary);
 displayBooks();
+clickAddBookBtn();
