@@ -19,8 +19,12 @@ function displayBooks() {
 }
 
 function clickAddBookBtn() {
-  addBookBtn = document.querySelector(".add-book-btn");
-  addBookBtn.addEventListener("click", () => console.log("clicked"));
+  const addBookBtn = document.querySelector(".add-book-btn");
+  const addBookForm = document.querySelector(".add-book-form");
+  addBookBtn.addEventListener(
+    "click",
+    () => (addBookForm.style.display = "flex")
+  );
 }
 
 addBookToLibrary("worm", "bow", 5000, true);

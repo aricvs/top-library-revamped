@@ -7,8 +7,8 @@ body {
   padding: 0;
 }
 
-.new-book-form {
+.add-book-form {
   width: 15vw;
-  display: flex;
+  display: none;
   flex-direction: column;
 }
