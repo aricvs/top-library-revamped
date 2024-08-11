@@ -5,6 +5,14 @@ function Book(title, author, pages, read) {
   this.author = author;
   this.pages = pages;
   this.read = read;
+
+  this.toggleRead = function () {
+    if (this.read === "yes") {
+      this.read = "no";
+    } else {
+      this.read = "yes";
+    }
+  };
 }
 
 function addBookToLibrary(title, author, pages, read) {
