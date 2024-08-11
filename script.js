@@ -5,7 +5,6 @@ function Book(title, author, pages, read) {
   this.author = author;
   this.pages = pages;
   this.read = read;
-  this.id = Math.random() + Math.random() * 100;
 }
 
 function addBookToLibrary(title, author, pages, read) {
@@ -29,7 +28,6 @@ function displayBooks() {
     bookDiv = document.createElement("div");
     deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete book";
-    deleteBtn.id = myLibrary[i]["id"];
     deleteBtn.classList.add("delete-btn");
     bookDiv.classList.add("book-div");
     bookDiv.appendChild(bookTitle);
@@ -37,6 +35,7 @@ function displayBooks() {
     bookDiv.appendChild(bookPages);
     bookDiv.appendChild(bookRead);
     bookDiv.appendChild(deleteBtn);
+    bookDiv.dataset.id = i;
     booksContainer.appendChild(bookDiv);
   }
 }
