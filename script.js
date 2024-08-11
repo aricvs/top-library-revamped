@@ -57,10 +57,10 @@ function closeForm() {
 function submitBook() {
   const submitBookBtn = document.querySelector(".submit-book-btn");
   submitBookBtn.addEventListener("click", () => {
-    const bookTitle = document.querySelector("#book-title").textContent;
-    const bookAuthor = document.querySelector("#book-author").textContent;
-    const bookPages = document.querySelector("#book-pages").textContent;
-    const bookRead = document.querySelector("#book-read").textContent;
+    const bookTitle = document.querySelector("#book-title").value;
+    const bookAuthor = document.querySelector("#book-author").value;
+    const bookPages = document.querySelector("#book-pages").value;
+    const bookRead = document.querySelector("#book-read").value;
     addBookToLibrary(bookTitle, bookAuthor, bookPages, bookRead);
     displayBooks();
   });
