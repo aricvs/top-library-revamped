@@ -8,7 +8,6 @@ body {
 }
 
 .add-book-form {
-  width: 15vw;
   display: none;
   flex-direction: column;
 }

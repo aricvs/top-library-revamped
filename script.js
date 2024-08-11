@@ -3,7 +3,7 @@ const myLibrary = [];
 function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
-  this.page = pages;
+  this.pages = pages;
   this.read = read;
 }
 
@@ -13,8 +13,24 @@ function addBookToLibrary(title, author, pages, read) {
 }
 
 function displayBooks() {
+  const booksContainer = document.querySelector(".books-container");
   for (let i = 0; i < myLibrary.length; i++) {
-    console.log(myLibrary[i]);
+    const bookTitle = document.createElement("p");
+    bookTitle.textContent = `Title: ${myLibrary[i]["title"]}`;
+    const bookAuthor = document.createElement("p");
+    bookAuthor.textContent = `Author: ${myLibrary[i]["author"]}`;
+    const bookPages = document.createElement("p");
+    bookPages.textContent = `Pages: ${myLibrary[i]["pages"]}`;
+    const bookRead = document.createElement("p");
+    bookRead.textContent = `Read: ${myLibrary[i]["read"]}`;
+    console.log(bookTitle, bookAuthor, bookPages, bookRead);
+    bookDiv = document.createElement("div");
+    bookDiv.classList.add("book-div");
+    bookDiv.appendChild(bookTitle);
+    bookDiv.appendChild(bookAuthor);
+    bookDiv.appendChild(bookPages);
+    bookDiv.appendChild(bookRead);
+    booksContainer.appendChild(bookDiv);
   }
 }
 
