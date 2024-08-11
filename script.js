@@ -34,6 +34,9 @@ function displayBooks() {
     bookRead.textContent = `Read: ${myLibrary[i]["read"]}`;
     console.log(bookTitle, bookAuthor, bookPages, bookRead);
     bookDiv = document.createElement("div");
+    toggleReadBtn = document.createElement("button");
+    toggleReadBtn.textContent = "Toggle read";
+    toggleReadBtn.classList.add("toggle-btn");
     deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete book";
     deleteBtn.classList.add("delete-btn");
@@ -42,6 +45,7 @@ function displayBooks() {
     bookDiv.appendChild(bookAuthor);
     bookDiv.appendChild(bookPages);
     bookDiv.appendChild(bookRead);
+    bookDiv.appendChild(toggleReadBtn);
     bookDiv.appendChild(deleteBtn);
     bookDiv.dataset.id = i;
     booksContainer.appendChild(bookDiv);
