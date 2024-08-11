@@ -97,6 +97,20 @@ function clearBookDisplay() {
   }
 }
 
+function toggleRead() {
+  const toggleReadBtns = document.getElementsByClassName("toggle-btn");
+  for (let i = 0; i < toggleReadBtns.length; i++) {
+    toggleReadBtns[i].addEventListener("click", () => {
+      console.log("click");
+      const bookId = toggleReadBtns[i].parentElement.dataset.id;
+      myLibrary[bookId].toggleRead();
+      displayBooks();
+      deleteBook();
+      toggleRead();
+    });
+  }
+}
+
 function deleteBook() {
   const deleteBtns = document.getElementsByClassName("delete-btn");
   for (let i = 0; i < deleteBtns.length; i++) {
@@ -116,4 +130,5 @@ displayBooks();
 clickAddBookBtn();
 closeForm();
 submitBook();
+toggleRead();
 deleteBook();
