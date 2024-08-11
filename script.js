@@ -60,7 +60,13 @@ function submitBook() {
     const bookTitle = document.querySelector("#book-title").value;
     const bookAuthor = document.querySelector("#book-author").value;
     const bookPages = document.querySelector("#book-pages").value;
-    const bookRead = document.querySelector("#book-read").value;
+    let bookRead = "";
+    const checkBoxRead = document.querySelector("#book-read");
+    if (checkBoxRead.checked) {
+      bookRead = "yes";
+    } else {
+      bookRead = "no";
+    }
     addBookToLibrary(bookTitle, bookAuthor, bookPages, bookRead);
     displayBooks();
   });
