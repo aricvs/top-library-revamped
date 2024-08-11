@@ -87,6 +87,7 @@ function submitBook() {
     addBookToLibrary(bookTitle, bookAuthor, bookPages, bookRead);
     displayBooks();
     deleteBook();
+    toggleRead();
   });
 }
 
@@ -119,6 +120,7 @@ function deleteBook() {
       myLibrary.splice(bookId, 1);
       displayBooks();
       deleteBook();
+      toggleRead();
     });
   }
 }
