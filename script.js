@@ -27,8 +27,18 @@ function clickAddBookBtn() {
   );
 }
 
+function closeForm() {
+  const closeFormBtn = document.querySelector(".close-form-btn");
+  const addBookForm = document.querySelector(".add-book-form");
+  closeFormBtn.addEventListener(
+    "click",
+    () => (addBookForm.style.display = "none")
+  );
+}
+
 addBookToLibrary("worm", "bow", 5000, true);
 addBookToLibrary("ubik", "dick", 500, true);
 addBookToLibrary("cronicas", "hefacar", 400, false);
 displayBooks();
 clickAddBookBtn();
+closeForm();
