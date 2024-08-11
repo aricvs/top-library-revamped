@@ -1,5 +1,6 @@
 const myLibrary = [];
 
+// Construct the book object
 function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
@@ -15,11 +16,13 @@ function Book(title, author, pages, read) {
   };
 }
 
+// Adds a book object to the myLibrary array
 function addBookToLibrary(title, author, pages, read) {
   newBook = new Book(title, author, pages, read);
   myLibrary.push(newBook);
 }
 
+// First clear all books from the display, then get the books in the myLibrary array and display them in the DOM
 function displayBooks() {
   clearBookDisplay();
   const booksContainer = document.querySelector(".books-container");
@@ -52,7 +55,8 @@ function displayBooks() {
   }
 }
 
-function clickAddBookBtn() {
+// Opens the add book form when the button is clicked
+function openForm() {
   const addBookBtn = document.querySelector(".add-book-btn");
   const addBookForm = document.querySelector(".add-book-form");
   addBookBtn.addEventListener("click", () => {
@@ -61,6 +65,7 @@ function clickAddBookBtn() {
   });
 }
 
+// Close the add book form when the button is clicked
 function closeForm() {
   const closeFormBtn = document.querySelector(".close-form-btn");
   const addBookForm = document.querySelector(".add-book-form");
@@ -71,6 +76,7 @@ function closeForm() {
   });
 }
 
+// Get the book information from the form, add it to the array and run all the base event handling functions again
 function submitBook() {
   const submitBookBtn = document.querySelector(".submit-book-btn");
   submitBookBtn.addEventListener("click", () => {
@@ -91,6 +97,7 @@ function submitBook() {
   });
 }
 
+// Clear all book DOM elements
 function clearBookDisplay() {
   const booksContainer = document.querySelector(".books-container");
   while (booksContainer.firstChild) {
@@ -98,6 +105,7 @@ function clearBookDisplay() {
   }
 }
 
+// Runs the toggleRead method of the selected book Object, run all the base event handling functions again
 function toggleRead() {
   const toggleReadBtns = document.getElementsByClassName("toggle-btn");
   for (let i = 0; i < toggleReadBtns.length; i++) {
@@ -112,6 +120,7 @@ function toggleRead() {
   }
 }
 
+// Delete the selected book from the array, run all the base functions again
 function deleteBook() {
   const deleteBtns = document.getElementsByClassName("delete-btn");
   for (let i = 0; i < deleteBtns.length; i++) {
@@ -125,11 +134,14 @@ function deleteBook() {
   }
 }
 
+// Add testing book objects
 addBookToLibrary("worm", "bow", 5000, "yes");
 addBookToLibrary("ubik", "dick", 500, "yes");
 addBookToLibrary("cronicas", "hefacar", 400, "no");
+
+// Run all the base event handling functions
 displayBooks();
-clickAddBookBtn();
+openForm();
 closeForm();
 submitBook();
 toggleRead();
