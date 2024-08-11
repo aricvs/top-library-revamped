@@ -21,19 +21,20 @@ function displayBooks() {
 function clickAddBookBtn() {
   const addBookBtn = document.querySelector(".add-book-btn");
   const addBookForm = document.querySelector(".add-book-form");
-  addBookBtn.addEventListener(
-    "click",
-    () => (addBookForm.style.display = "flex")
-  );
+  addBookBtn.addEventListener("click", () => {
+    addBookForm.style.display = "flex";
+    addBookBtn.style.display = "none";
+  });
 }
 
 function closeForm() {
   const closeFormBtn = document.querySelector(".close-form-btn");
   const addBookForm = document.querySelector(".add-book-form");
-  closeFormBtn.addEventListener(
-    "click",
-    () => (addBookForm.style.display = "none")
-  );
+  const addBookBtn = document.querySelector(".add-book-btn");
+  closeFormBtn.addEventListener("click", () => {
+    addBookForm.style.display = "none";
+    addBookBtn.style.display = "inline";
+  });
 }
 
 addBookToLibrary("worm", "bow", 5000, true);
