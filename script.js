@@ -74,6 +74,7 @@ function submitBook() {
     }
     addBookToLibrary(bookTitle, bookAuthor, bookPages, bookRead);
     displayBooks();
+    deleteBook();
   });
 }
 
