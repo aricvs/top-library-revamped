@@ -5,6 +5,7 @@ function Book(title, author, pages, read) {
   this.author = author;
   this.pages = pages;
   this.read = read;
+  this.id = Math.random() + Math.random() * 100;
 }
 
 function addBookToLibrary(title, author, pages, read) {
