@@ -37,11 +37,12 @@ button {
   text-align: center;
   text-decoration: none;
   color: #fff;
-  border: 2px solid transparent;
+  border: 2px solid gray !important;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
-  width: 15rem;
+  width: 12rem;
+  margin: 10px;
 }
 
 button:hover {
@@ -123,6 +124,7 @@ button:active {
   align-items: center;
   width: 15rem;
   font-size: larger;
+  border: 2px solid gray;
 }
 
 .toggle-btn {
