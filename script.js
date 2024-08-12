@@ -35,7 +35,6 @@ function displayBooks() {
     bookPages.textContent = `Pages: ${myLibrary[i]["pages"]}`;
     const bookRead = document.createElement("p");
     bookRead.textContent = `Read: ${myLibrary[i]["read"]}`;
-    console.log(bookTitle, bookAuthor, bookPages, bookRead);
     bookDiv = document.createElement("div");
     toggleReadBtn = document.createElement("button");
     toggleReadBtn.textContent = "Toggle read";
