@@ -142,9 +142,9 @@ function resetForm() {
 }
 
 // Add testing book objects
-addBookToLibrary("worm", "bow", 5000, "yes");
-addBookToLibrary("ubik", "dick", 500, "yes");
-addBookToLibrary("cronicas", "hefacar", 400, "no");
+// addBookToLibrary("worm", "bow", 5000, "yes");
+// addBookToLibrary("ubik", "dick", 500, "yes");
+// addBookToLibrary("cronicas", "hefacar", 400, "no");
 
 // Run all the base event handling functions
 displayBooks();
