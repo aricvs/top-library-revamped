@@ -119,6 +119,7 @@ button:active {
   justify-content: center;
   align-items: center;
   width: 15rem;
+  font-size: larger;
 }
 
 .toggle-btn {
