@@ -6,7 +6,6 @@ function Book(title, author, pages, read) {
   this.author = author;
   this.pages = pages;
   this.read = read;
-
   this.toggleRead = function () {
     if (this.read === "yes") {
       this.read = "no";
@@ -64,7 +63,7 @@ function openForm() {
   });
 }
 
-// Close the add book form when the button is clicked
+// Close the add book form when the button is clicked, resetting fields
 function closeForm() {
   const closeFormBtn = document.querySelector(".close-form-btn");
   closeFormBtn.addEventListener("click", () => {
@@ -133,6 +132,7 @@ function deleteBook() {
   }
 }
 
+// Reset form fields to clear everything
 function resetForm() {
   const addBookBtn = document.querySelector(".add-book-btn");
   const addBookForm = document.querySelector(".add-book-form");
