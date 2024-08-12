@@ -60,6 +60,7 @@ function openForm() {
   const addBookBtn = document.querySelector(".add-book-btn");
   const addBookForm = document.querySelector(".add-book-form");
   addBookBtn.addEventListener("click", () => {
+    addBookForm.reset();
     addBookForm.style.display = "flex";
     addBookBtn.style.display = "none";
   });
