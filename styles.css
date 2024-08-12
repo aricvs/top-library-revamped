@@ -8,6 +8,24 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
+}
+
+input {
+  width: 15rem;
+  padding: 3px;
+  font-size: larger;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  transform: scale(2);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: larger;
 }
 
 button {
@@ -22,6 +40,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+  width: 15rem;
 }
 
 button:hover {
@@ -50,6 +69,7 @@ button:active {
 .add-book-form {
   display: none;
   flex-direction: column;
+  align-items: center;
 }
 
 .submit-book-btn {
@@ -98,6 +118,7 @@ button:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 15rem;
 }
 
 .toggle-btn {
@@ -113,4 +134,9 @@ button:active {
 .toggle-btn:active {
   background-color: #c69500;
   border-color: #c69500;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+  }
 }
