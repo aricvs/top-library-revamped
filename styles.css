@@ -140,10 +140,11 @@ button:active {
 
 @media screen and (min-width: 768px) {
   .books-container {
-    width: 90%;
+    width: 100%;
     margin: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    row-gap: 50px;
-    column-gap: 50px;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
