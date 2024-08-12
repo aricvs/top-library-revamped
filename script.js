@@ -60,7 +60,6 @@ function openForm() {
   const addBookBtn = document.querySelector(".add-book-btn");
   const addBookForm = document.querySelector(".add-book-form");
   addBookBtn.addEventListener("click", () => {
-    addBookForm.reset();
     addBookForm.style.display = "flex";
     addBookBtn.style.display = "none";
   });
@@ -69,11 +68,8 @@ function openForm() {
 // Close the add book form when the button is clicked
 function closeForm() {
   const closeFormBtn = document.querySelector(".close-form-btn");
-  const addBookForm = document.querySelector(".add-book-form");
-  const addBookBtn = document.querySelector(".add-book-btn");
   closeFormBtn.addEventListener("click", () => {
-    addBookForm.style.display = "none";
-    addBookBtn.style.display = "inline";
+    resetForm();
   });
 }
 
@@ -95,6 +91,7 @@ function submitBook() {
     displayBooks();
     deleteBook();
     toggleRead();
+    resetForm();
   });
 }
 
@@ -133,6 +130,14 @@ function deleteBook() {
       toggleRead();
     });
   }
+}
+
+function resetForm() {
+  const addBookBtn = document.querySelector(".add-book-btn");
+  const addBookForm = document.querySelector(".add-book-form");
+  addBookForm.style.display = "none";
+  addBookBtn.style.display = "inline";
+  addBookForm.reset();
 }
 
 // Add testing book objects
