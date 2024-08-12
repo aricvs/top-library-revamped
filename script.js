@@ -86,11 +86,13 @@ function submitBook() {
     } else {
       bookRead = "no";
     }
-    addBookToLibrary(bookTitle, bookAuthor, bookPages, bookRead);
+    if (bookTitle && bookAuthor && bookPages) {
+      addBookToLibrary(bookTitle, bookAuthor, bookPages, bookRead);
+      resetForm();
+    }
     displayBooks();
     deleteBook();
     toggleRead();
-    resetForm();
   });
 }
 
