@@ -11,14 +11,78 @@ body {
 }
 
 button {
-  height: 2rem;
-  width: 8rem;
-  border-radius: 1rem;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.add-book-btn {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.add-book-btn:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.add-book-btn:active {
+  background-color: #004085;
+  border-color: #004085;
 }
 
 .add-book-form {
   display: none;
   flex-direction: column;
+}
+
+.submit-book-btn {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.submit-book-btn:hover {
+  background-color: #218838;
+  border-color: #218838;
+}
+
+.submit-book-btn:active {
+  background-color: #1e7e34;
+  border-color: #1e7e34;
+}
+
+.close-form-btn,
+.delete-btn {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.close-form-btn:hover,
+.delete-btn:hover {
+  background-color: #c82333;
+  border-color: #c82333;
+}
+
+.close-form-btn:active,
+.delete-btn:active {
+  background-color: #a71d2a;
+  border-color: #a71d2a;
 }
 
 .books-container {
@@ -34,5 +98,19 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 10rem;
+}
+
+.toggle-btn {
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.toggle-btn:hover {
+  background-color: #e0a800;
+  border-color: #e0a800;
+}
+
+.toggle-btn:active {
+  background-color: #c69500;
+  border-color: #c69500;
 }
